@@ -25,30 +25,46 @@ webcam, a device picker, a mirror toggle, and a snapshot button.
 
 ## Installation
 
-The plugin directory name must match the plugin id (`mandavkarpranjal.cam-preview`).
+Install with the Omarchy CLI (recommended):
 
-Clone straight into the Omarchy user plugin dir:
+```sh
+omarchy plugin add https://github.com/MandavkarPranjal/cam-preview.git --yes
+omarchy plugin enable mandavkarpranjal.cam-preview
+omarchy restart shell
+```
+
+Then add the widget from the Omarchy settings panel (bar layout editor,
+category System).
+
+The plugin directory name must match the plugin id
+(`mandavkarpranjal.cam-preview`); `omarchy plugin add` handles this for you.
+
+### Updates
+
+```sh
+omarchy plugin update mandavkarpranjal.cam-preview --yes
+omarchy restart shell
+```
+
+### Removal
+
+```sh
+omarchy plugin remove mandavkarpranjal.cam-preview --yes
+```
+
+### Manual / development install
+
+Clone straight into the Omarchy user plugin dir, or use the helper script:
 
 ```sh
 git clone https://github.com/MandavkarPranjal/cam-preview.git ~/.config/omarchy/plugins/mandavkarpranjal.cam-preview
 ```
-
-Or install with the helper script:
 
 ```sh
 ./install.sh            # copies into ~/.config/omarchy/plugins/mandavkarpranjal.cam-preview
 ./install.sh --link     # symlinks instead (handy for development)
 ./install.sh --remove   # removes the installed copy
 ```
-
-Then restart the shell and enable the widget in the bar:
-
-```sh
-omarchy restart shell
-```
-
-Add the widget from the Omarchy settings panel (bar layout editor, category
-System) or via `omarchy-shell` config tooling.
 
 ## Usage
 
