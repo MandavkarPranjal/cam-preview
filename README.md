@@ -1,4 +1,4 @@
-# Camera Preview (himmel.cam-preview)
+# Camera Preview (mandavkarpranjal.cam-preview)
 
 A live camera preview bar widget for [Omarchy](https://omarchy.org). The bar
 gets a camera icon; clicking it opens a popup with a live preview of your
@@ -15,7 +15,7 @@ webcam, a device picker, a mirror toggle, and a snapshot button.
   saved unmirrored)
 - Snapshot capture: click the bar icon with the right mouse button, or the
   Snapshot button in the popup — saves `~/Pictures/camera-preview-<timestamp>.jpg`
-- IPC: `omarchy-shell himmel.cam-preview toggle|takeSnapshot|setMirror <true|false>`
+- IPC: `omarchy-shell mandavkarpranjal.cam-preview toggle|takeSnapshot|setMirror <true|false>`
 
 ## Requirements
 
@@ -25,18 +25,18 @@ webcam, a device picker, a mirror toggle, and a snapshot button.
 
 ## Installation
 
-The plugin directory name must match the plugin id (`himmel.cam-preview`).
+The plugin directory name must match the plugin id (`mandavkarpranjal.cam-preview`).
 
 Clone straight into the Omarchy user plugin dir:
 
 ```sh
-git clone https://github.com/<you>/cam-preview.git ~/.config/omarchy/plugins/himmel.cam-preview
+git clone https://github.com/MandavkarPranjal/cam-preview.git ~/.config/omarchy/plugins/mandavkarpranjal.cam-preview
 ```
 
 Or install with the helper script:
 
 ```sh
-./install.sh            # copies into ~/.config/omarchy/plugins/himmel.cam-preview
+./install.sh            # copies into ~/.config/omarchy/plugins/mandavkarpranjal.cam-preview
 ./install.sh --link     # symlinks instead (handy for development)
 ./install.sh --remove   # removes the installed copy
 ```

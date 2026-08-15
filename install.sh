@@ -3,7 +3,7 @@
 set -euo pipefail
 
 SOURCE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PLUGIN_DIR="${HOME}/.config/omarchy/plugins/himmel.cam-preview"
+PLUGIN_DIR="${HOME}/.config/omarchy/plugins/mandavkarpranjal.cam-preview"
 MODE="copy"
 
 case "${1:-}" in
@@ -19,7 +19,7 @@ case "${1:-}" in
     ;;
   --help|-h)
     echo "Usage: $0 [--link|--remove]"
-    echo "  (default)  copy the plugin into ~/.config/omarchy/plugins/himmel.cam-preview"
+    echo "  (default)  copy the plugin into ~/.config/omarchy/plugins/mandavkarpranjal.cam-preview"
     echo "  --link     symlink the repo dir instead (for development)"
     echo "  --remove   delete the installed copy"
     exit 0

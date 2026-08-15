@@ -28,11 +28,11 @@ import qs.Commons
 //     sensor self-limits), with the sensor fully released on close.
 Panel {
   id: root
-  moduleName: "himmel.cam-preview"
-  ipcTarget: "himmel.cam-preview"
+  moduleName: "mandavkarpranjal.cam-preview"
+  ipcTarget: "mandavkarpranjal.cam-preview"
 
   // IPC surface: the base open/close lifecycle plus snapshot control, so
-  // `omarchy-shell himmel.cam-preview takeSnapshot` works from outside.
+  // `omarchy-shell mandavkarpranjal.cam-preview takeSnapshot` works from outside.
   IpcHandler {
     target: root.ipcTarget
     function open(): void { root.open() }
@@ -154,7 +154,7 @@ Panel {
   // The whole capture stack (CaptureSession + Camera + ImageCapture) is
   // mounted and destroyed together with the popup so the sensor is fully
   // released whenever the panel closes (see the header comment).
-  readonly property string previewFile: Quickshell.env("XDG_RUNTIME_DIR") + "/himmel.cam-preview-frame.jpg"
+  readonly property string previewFile: Quickshell.env("XDG_RUNTIME_DIR") + "/mandavkarpranjal.cam-preview-frame.jpg"
 
   Loader {
     id: captureLoader

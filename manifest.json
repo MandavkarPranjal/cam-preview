@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "himmel.cam-preview",
+  "id": "mandavkarpranjal.cam-preview",
   "name": "Camera Preview",
-  "version": "1.0.0",
-  "author": "himmel",
+  "version": "1.1.0",
+  "author": "Mandavkar Pranjal",
   "license": "MIT",
   "description": "Live camera preview popup with device picker and snapshot capture",
   "kinds": [
