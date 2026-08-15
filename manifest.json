@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "himmel.cam-preview",
+  "name": "Camera Preview",
+  "version": "1.0.0",
+  "author": "himmel",
+  "license": "MIT",
+  "description": "Live camera preview popup with device picker and snapshot capture",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Camera Preview",
+    "description": "Click the camera icon to open a live preview of the selected camera",
+    "category": "System",
+    "aliases": [
+      "camera",
+      "webcam",
+      "cam"
+    ],
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "device": "auto",
+      "previewWidth": 480,
+      "mirror": true
+    },
+    "schema": [
+      {
+        "key": "device",
+        "type": "string",
+        "label": "Camera device",
+        "defaultValue": "auto",
+        "description": "Device id from the picker inside the panel, or \"auto\" for the system default camera."
+      },
+      {
+        "key": "previewWidth",
+        "type": "integer",
+        "label": "Preview width",
+        "min": 240,
+        "max": 960,
+        "step": 60,
+        "defaultValue": 480,
+        "description": "Width of the live preview in the popup; height follows a 16:9 ratio."
+      },
+      {
+        "key": "mirror",
+        "type": "boolean",
+        "label": "Mirror preview",
+        "defaultValue": true,
+        "description": "Flip the preview horizontally, like a mirror. Snapshots are always saved unmirrored."
+      }
+    ]
+  }
+}
