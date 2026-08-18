@@ -242,16 +242,15 @@ Panel {
     contentWidth: root.previewWidth + panel.padding * 2
     contentHeight: Math.round(panelColumn.implicitHeight) + panel.padding * 2
 
-    // Keyboard focus target for the panel; Esc closes the preview.
-    Item {
+    // Keyboard focus target for the panel; Esc closes the preview, Tab
+    // hops to the next/previous bar plugin. Blocked while the device
+    // dropdown popup is open so j/k walk its options instead.
+    PanelKeyCatcher {
       id: keyCatcher
-      focus: true
-      Keys.onPressed: function(event) {
-        if (event.key === Qt.Key_Escape) {
-          root.close()
-          event.accepted = true
-        }
-      }
+      anchors.fill: parent
+      blocked: devicePicker.popupOpen
+      onCloseRequested: root.close()
+      onTabRequested: function(direction) { root.switchPanel(direction) }
     }
 
     Column {
