@@ -238,8 +238,21 @@ Panel {
     owner: root
     bar: root.bar
     open: root.opened
+    focusTarget: keyCatcher
     contentWidth: root.previewWidth + panel.padding * 2
     contentHeight: Math.round(panelColumn.implicitHeight) + panel.padding * 2
+
+    // Keyboard focus target for the panel; Esc closes the preview.
+    Item {
+      id: keyCatcher
+      focus: true
+      Keys.onPressed: function(event) {
+        if (event.key === Qt.Key_Escape) {
+          root.close()
+          event.accepted = true
+        }
+      }
+    }
 
     Column {
       id: panelColumn
